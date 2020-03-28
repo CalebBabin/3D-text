@@ -123,10 +123,10 @@ loader.load( font_json_url, function ( font ) {
 
 		
 		group.position.x += position_velocity[0];
-		if (group.position.x > boundingBoxSize || group.position.x < -boundingBoxSize) {
+		if (group.position.x > (boundingBoxSize*1.7777) || group.position.x < -(boundingBoxSize*1.7777)) {
 			position_velocity[0] = changeVelocity(position_velocity[0]);
 
-			group.position.x = group.position.x > boundingBoxSize ? boundingBoxSize : -boundingBoxSize;
+			group.position.x = group.position.x > (boundingBoxSize*1.7777) ? (boundingBoxSize*1.7777) : -(boundingBoxSize*1.7777);
 		}
 		group.position.y += position_velocity[1];
 		if (group.position.y > boundingBoxSize || group.position.y < -boundingBoxSize) {
