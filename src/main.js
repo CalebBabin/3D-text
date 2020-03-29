@@ -8,11 +8,11 @@ const words = [
 	"GOD SUB",
 	"Subscriber only !discord",
 	"$24.99",
-	"Use ur prime sub on me :)",
+	"Use ur prime sub on me :D",
 	"Poop",
 	"NaM",
 ];
-const font_json_url = require('./Roboto-Regular-msdf.jsondumb');
+const font_json_url = require('./helvetiker_regular.typeface.jsondumb');
 
 const easeInOutQuart = t => t<.5 ? 2*t*t : -1+(4-2*t)*t;
 
@@ -22,13 +22,13 @@ loader.load( font_json_url, function ( font ) {
 	console.log(font);
 	const tempGeometry = new THREE.TextGeometry( words[Math.floor(Math.random()*words.length)], {
 		size: 10,
-		height: 2,
+		height: 3,
 		font: font,
 
 		curveSegments: 4,
 
 		bevelThickness: 0.05,
-		bevelSize: 0.2,
+		bevelSize: 0.1,
 		bevelEnabled: true,
 	} );
 
@@ -51,7 +51,7 @@ loader.load( font_json_url, function ( font ) {
 	const group = new THREE.Group();
 
 	const changeVelocity = (velocity) => {
-		return (Math.random()/2 + 0.1) * (velocity > 0 ? -1 : 1);
+		return (Math.random()/2 + 0.2) * (velocity > 0 ? -1 : 1);
 	}
 	const boundingBoxSize = 50;
 	const position_velocity = [changeVelocity(Math.random()-0.5), changeVelocity(Math.random()-0.5)];
@@ -59,9 +59,9 @@ loader.load( font_json_url, function ( font ) {
 	for (let i = 0; i < 100; i++) console.log(changeVelocity(Math.random()-0.5))
 
 	const rotationspeeds = [
-		Math.random()/100+0.001,
-		Math.random()/100+0.001,
-		Math.random()/100+0.001,
+		Math.random()/125+0.001,
+		Math.random()/125+0.001,
+		Math.random()/125+0.001,
 	]
 	const rotations = [
 		0.5,
